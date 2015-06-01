@@ -51,11 +51,33 @@
             android:name=".Post"
             android:label="@string/title_activity_post" >
         </activity>
+
         <dependency>
-            <groupId>com.googlecode.mp4parser</groupId>
-            <artifactId>isoparser</artifactId>
-            <version>1.0.1</version>
+            <groupId>
+com.googlecode.mp4parser
+            </groupId>
+
+            <artifactId>
+isoparser
+            </artifactId>
+
+            <version>
+1.0.1
+            </version>
         </dependency>
+
+        <activity
+            android:name=".ChatList"
+            android:label="@string/title_activity_chat_list" >
+        </activity>
+        <activity
+            android:name=".Chat"
+            android:label="@string/title_activity_chat" >
+        </activity>
+        <activity
+            android:name=".Feedback"
+            android:label="@string/title_activity_feedback" >
+        </activity>
     </application>
 
 </manifest>

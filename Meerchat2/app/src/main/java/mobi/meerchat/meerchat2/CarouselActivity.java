@@ -303,7 +303,7 @@ public class CarouselActivity extends FragmentActivity {
         Button btnChat = new Button(this);
         btnChat.setOnClickListener(new View.OnClickListener() {
             public void onClick(View V) {
-                //Intent chatIntent = new Intent(getApplicationContext(), bafitinc.bafit.ChatList.class); //was Chat
+                Intent chatIntent = new Intent(getApplicationContext(), mobi.meerchat.meerchat2.ChatList.class); //was Chat
                 //startActivity(chatIntent);
             }
         });

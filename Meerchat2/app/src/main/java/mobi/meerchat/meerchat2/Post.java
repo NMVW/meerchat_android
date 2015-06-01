@@ -55,13 +55,6 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.widget.VideoView;
 
-import com.coremedia.iso.IsoFile;
-import com.coremedia.iso.boxes.Container;
-import com.googlecode.mp4parser.authoring.Track;
-import com.googlecode.mp4parser.authoring.builder.DefaultMp4Builder;
-import com.googlecode.mp4parser.authoring.container.mp4.MovieCreator;
-import com.googlecode.mp4parser.authoring.tracks.AppendTrack;
-import com.googlecode.mp4parser.authoring.Movie;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -456,51 +449,6 @@ public class Post extends Activity implements SurfaceHolder.Callback, OnInfoList
                     //String f3 = Post.class.getProtectionDomain().getCodeSource().getLocation().getFile() + "/3.mp4";
                     String f3 = Environment.getExternalStorageDirectory() + "/Bafit/vids/" + 3 + ".mp4";
 
-
-                    try {
-                        Movie[] inMovies = new Movie[]{
-                                MovieCreator.build(f1),
-                                MovieCreator.build(f2),
-                                MovieCreator.build(f3)};
-                        Log.v("stiching", "movies built");
-
-                        List<Track> videoTracks = new LinkedList<Track>();
-                        List<Track> audioTracks = new LinkedList<Track>();
-
-                        for (Movie m : inMovies) {
-                            for (Track t : m.getTracks()) {
-                                if (t.getHandler().equals("soun")) {
-                                    audioTracks.add(t);
-                                }
-                                if (t.getHandler().equals("vide")) {
-                                    videoTracks.add(t);
-                                }
-                            }
-                        }
-                        Log.v("stiching", "track loop done");
-
-                        Movie result = new Movie();
-
-                        if (audioTracks.size() > 0) {
-                            result.addTrack(new AppendTrack(audioTracks.toArray(new Track[audioTracks.size()])));
-                        }
-                        if (videoTracks.size() > 0) {
-                            result.addTrack(new AppendTrack(videoTracks.toArray(new Track[videoTracks.size()])));
-                        }
-                        Log.v("stiching", "things added");
-
-                        Container out = new DefaultMp4Builder().build(result);
-                        Log.v("stiching", "out");
-
-                        FileChannel fc = new RandomAccessFile(Environment.getExternalStorageDirectory() + "/Bafit/vids/" + outputFile + ".mp4", "rw").getChannel(); //was String.format("output.mp4")
-                        Log.v("stiching", "fc made");
-                        out.writeContainer(fc);
-                        Log.v("stiching", fc + "");
-                        fc.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-
-                    }
 
                     Log.v("PostActivity", "send");
                     //I'm using this as a proxy send button
