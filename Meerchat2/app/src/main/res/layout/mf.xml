@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center">
+    <mobi.meerchat.meerchat2.MyLinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/transparent">
+
+        <!-- was 270 x 228-->
+        <Button
+            android:id="@+id/content"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="150dp">
+        </Button>
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=""
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="80dp">
+        </TextView>
+        <VideoView
+            android:id="@+id/myvideoview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@android:color/transparent"
+            android:visibility="invisible"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="133dp">
+        </VideoView>
+
+    </mobi.meerchat.meerchat2.MyLinearLayout>
+</LinearLayout>

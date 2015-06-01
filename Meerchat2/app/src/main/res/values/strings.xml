@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Meerchat2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="facebook_app_id">1604324833119436</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_started">To get started, log in using Facebook</string>
+    <string name="title_activity_tc">TC</string>
+    <string name="title_activity_user_creation">UserCreation</string>
+    <string name="title_activity_verification_code">VerificationCode</string>
+    <string name="title_activity_carousel">CarouselActivity</string>
+    <string name="title_activity_post">Post</string>
+</resources>
